@@ -1,18 +1,20 @@
 function hasTargetSum(array, target) {
-  // Write your algorithm here
+  //write  your algorithm here
+  //need to iterate over the array of numbers
+  for(let i=0;i<array.length;i++){
+    //find the number the first number should add to get the target(target-currentnumber)
+    let remainder = target-array[i];
+    //iterate over the remaining numbers to look for the number that should be added
+    //this is of time complexity o(n^2)
+    for(let j=i+1; j<array.length; j++){
+      if (array[j] ===target-array[i]){
+        return true
+        
+      }
+    }
+  }
+  return false
 }
-
-/* 
-  Write the Big O time complexity of your function here
-*/
-
-/* 
-  Add your pseudocode here
-*/
-
-/*
-  Add written explanation of your solution here
-*/
 
 // You can run `node index.js` to view these console logs
 if (require.main === module) {

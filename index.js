@@ -1,10 +1,10 @@
 function hasTargetSum(array, target) {
   //write  your algorithm here
-  //need to iterate over the array of numbers
+  //I need to iterate over the array of numbers to find my two number using their indeces.
   for(let i=0;i<array.length;i++){
-    //find the number the first number should add to get the target(target-currentnumber)
+    //next I find the  first number that should add to another number to get the target i.e remaiming number=(target-currentnumber)
     let remainder = target-array[i];
-    //iterate over the remaining numbers to look for the number that should be added
+    //iterate over the remaining numbers to look for the number that should be added to the first no. above to get target
     //this is of time complexity o(n^2)
     for(let j=i+1; j<array.length; j++){
       if (array[j] ===target-array[i]){
